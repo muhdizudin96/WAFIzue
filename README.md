@@ -11,7 +11,8 @@ Special thank to all contributors [Awesome-WAF](https://github.com/0xInfection/A
 # Installation
 ```console
 $ pip3 install -r requirements.txt # setup WAFIzue
-$ python wafw00f-master/setup.py install # setup Wafw00f
+$ cd wafw00f-master # Go to wafw00f directory
+$ pip install wafw00f # setup Wafw00f
 ```
 
 # Usage
