@@ -38,7 +38,7 @@ def write_results(output, results):
     # add style to dataframe
     s = df_marks.style.map(color_fail_red, subset=['Status'])
     # render dataframe as html
-    f.write(s.render())
+    f.write(s.to_html())
     f.close()
     # open file
     webbrowser.open('file://'+str(output))
