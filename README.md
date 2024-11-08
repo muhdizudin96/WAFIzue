@@ -10,6 +10,7 @@ Special thank to all contributors [Awesome-WAF](https://github.com/0xInfection/A
 
 # Installation
 ```console
+$ cd WAFIzue # Go to WAFIzue directory
 $ pip3 install -r requirements.txt # setup WAFIzue
 $ cd wafw00f-master # Go to wafw00f directory
 $ pip install wafw00f # setup Wafw00f
