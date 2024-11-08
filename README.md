@@ -57,7 +57,7 @@ optional arguments:
   -c COOKIES, --cookies COOKIES
                         cookies for the session. Use "," (comma) to separeate
                         cookies For instance: -c
-                        cookie1="something",cookie2="something"
+                        cookie1="value",cookie2="value"
 ```
 ## Fuzzing mode
 ```console
