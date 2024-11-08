@@ -21,14 +21,16 @@ $ pip install wafw00f # setup Wafw00f
 ```console
 $ python3 WAFIzue.py -h
 
-.##......##....###....########.####.########.##.....##.########
-.##..##..##...##.##...##........##.......##..##.....##.##......
-.##..##..##..##...##..##........##......##...##.....##.##......
-.##..##..##.##.....##.######....##.....##....##.....##.######..
-.##..##..##.#########.##........##....##.....##.....##.##......
-.##..##..##.##.....##.##........##...##......##.....##.##......
-..###..###..##.....##.##.......####.########..#######..########
-
+#   __       __   ______   ________ ______                                    
+#  /  |  _  /  | /      \ /        /      |                                   
+#  $$ | / \ $$ |/$$$$$$  |$$$$$$$$/$$$$$$/ ________  __    __   ______        
+#  $$ |/$  \$$ |$$ |__$$ |$$ |__     $$ | /        |/  |  /  | /      \       
+#  $$ /$$$  $$ |$$    $$ |$$    |    $$ | $$$$$$$$/ $$ |  $$ |/$$$$$$  |      
+#  $$ $$/$$ $$ |$$$$$$$$ |$$$$$/     $$ |   /  $$/  $$ |  $$ |$$    $$ |      
+#  $$$$/  $$$$ |$$ |  $$ |$$ |      _$$ |_ /$$$$/__ $$ \__$$ |$$$$$$$$/       
+#  $$$/    $$$ |$$ |  $$ |$$ |     / $$   /$$      |$$    $$/ $$       |      
+#  $$/      $$/ $$/   $$/ $$/      $$$$$$/$$$$$$$$/  $$$$$$/   $$$$$$$/       
+#                                                                        
 Develop by Muhammad Izzuddin Bin Salim | Student ID:B22020039
 
 usage: WAFIzue.py [-h] [-F] [-xss] [-sqli] [-f] -t TARGET [-d DATABASE]
@@ -83,4 +85,4 @@ $ python3 WAFIzue.py -f -t "<target IP>"
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. need a Idea?
 
 
-As a future work continuation on improving the tools would be interesting.  The code injection has been the most common vulnerability in the past ten years based on the OWASP top ten list. It would be interesting to add more fuzzing mode and payload execution to WAFIzue. For instance, XML External Entity (XXE) Injection and Command Injection. When ProjectX is performing fuzzing mode, it fuzzes both XSS and SQL at the same time. Another thing that would be interesting is to split fuzzing mode so the tester specifically fuzzes what they want, not both XSS and SQLI at the same time. Furthermore, testing the tool on different WAF products/vendors could also be possible and beneficial. Lastly, both default payload executions and fuzzing databases should be updated to make to WAFIzue more powerful
+As a future work continuation on improving the tools would be interesting.  The code injection has been the most common vulnerability in the past ten years based on the OWASP top ten list. It would be interesting to add more fuzzing mode and payload execution to WAFIzue. For instance, XML External Entity (XXE) Injection and Command Injection. When WAFIzue is performing fuzzing mode, it fuzzes both XSS and SQL at the same time. Another thing that would be interesting is to split fuzzing mode so the tester specifically fuzzes what they want, not both XSS and SQLI at the same time. Furthermore, testing the tool on different WAF products/vendors could also be possible and beneficial. Lastly, both default payload executions and fuzzing databases should be updated to make to WAFIzue more powerful
