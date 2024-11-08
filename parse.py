@@ -30,7 +30,7 @@ def parse():
     parser.add_argument('-o', '--output', type=str,
                         help="Name of the output file ex -o output.html")
     parser.add_argument('-c', '--cookies', type=str,
-                        help='cookies for the secssion. Use "," (comma) to separeate cookies\nFor instance: -c cookie1="something",cookie2="something"')
+                        help='cookies for the session. Use "," (comma) to separeate cookies\nFor instance: -c cookie1="something",cookie2="something"')
     args = parser.parse_args()
 
 
