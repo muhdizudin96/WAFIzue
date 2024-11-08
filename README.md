@@ -81,6 +81,6 @@ WAFIzue is using [Wafw00f](https://github.com/EnableSecurity/wafw00f) to perform
 $ python3 WAFIzue.py -f -t "<target IP>"
 ```
 
-# Future Work and Enhancements
+# Future Work & Enhancements
 
 As a future work continuation on improving the tools would be interesting.  The code injection has been the most common vulnerability in the past ten years based on the OWASP top ten list. It would be interesting to add more fuzzing mode and payload execution to WAFIzue. For instance, XML External Entity (XXE) Injection and Command Injection. When WAFIzue is performing fuzzing mode, it fuzzes both XSS and SQL at the same time. Another thing that would be interesting is to split fuzzing mode so the tester specifically fuzzes what they want, not both XSS and SQLI at the same time. Furthermore, testing the tool on different WAF products/vendors could also be possible and beneficial. Lastly, both default payload executions and fuzzing databases should be updated to make to WAFIzue more powerful
