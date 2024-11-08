@@ -36,13 +36,13 @@ Develop by Muhammad Izzuddin Bin Salim | Student ID:B22020039
 usage: WAFIzue.py [-h] [-F] [-xss] [-sqli] [-f] -t TARGET [-d DATABASE]
                    [-o OUTPUT] [-c COOKIES]
 
-ProjectX WAF testing tool
+WAFIzue WAF testing tool
 
 optional arguments:
   -h, --help            show this help message and exit
   -F, --fuzz            testing WAF using fuzzing
   -xss, --xss           testing WAF by executing XSS payloads
-  -sqli, --sqli         testin WAF by executing SQL payloads
+  -sqli, --sqli         testing WAF by executing SQL payloads
   -f, --footprinting    footprinting WAF using WAFWOOF
   -t TARGET, --target TARGET
                         target's url and "WAFIzue" where the payloads will be
@@ -54,7 +54,7 @@ optional arguments:
   -o OUTPUT, --output OUTPUT
                         Name of the output file ex -o output.html
   -c COOKIES, --cookies COOKIES
-                        cookies for the secssion. Use "," (comma) to separeate
+                        cookies for the session. Use "," (comma) to separeate
                         cookies For instance: -c
                         cookie1="something",cookie2="something"
 ```
@@ -76,13 +76,11 @@ $ python3 WAFIzue.py -sqli -t "<target IP>/?name=WAFIzue" -o sql.html -c cookie1
 the payloads will be replace with ```WAFIzue``` in ``-t`` so dont for get to include it
 
 ## Footprinting
-WAFIzue is use [Wafw00f](https://github.com/EnableSecurity/wafw00f) to perform footprinting
+WAFIzue is using [Wafw00f](https://github.com/EnableSecurity/wafw00f) to perform footprinting
 ```console
 $ python3 WAFIzue.py -f -t "<target IP>"
 ```
 
-# Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. need a Idea?
-
+# Future Work and Enhancements
 
 As a future work continuation on improving the tools would be interesting.  The code injection has been the most common vulnerability in the past ten years based on the OWASP top ten list. It would be interesting to add more fuzzing mode and payload execution to WAFIzue. For instance, XML External Entity (XXE) Injection and Command Injection. When WAFIzue is performing fuzzing mode, it fuzzes both XSS and SQL at the same time. Another thing that would be interesting is to split fuzzing mode so the tester specifically fuzzes what they want, not both XSS and SQLI at the same time. Furthermore, testing the tool on different WAF products/vendors could also be possible and beneficial. Lastly, both default payload executions and fuzzing databases should be updated to make to WAFIzue more powerful
