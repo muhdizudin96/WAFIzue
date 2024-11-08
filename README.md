@@ -74,7 +74,7 @@ $ python3 WAFIzue.py -sqli -t "<target IP>/?name=WAFIzue" -o sql.html -c cookie1
 the payloads will be replace with ```WAFIzue``` in ``-t`` so dont for get to include it
 
 ## Footprinting
-ProjectX is use [Wafw00f](https://github.com/EnableSecurity/wafw00f) to perform footprinting
+WAFIzue is use [Wafw00f](https://github.com/EnableSecurity/wafw00f) to perform footprinting
 ```console
 $ python3 WAFIzue.py -f -t "<target IP>"
 ```
