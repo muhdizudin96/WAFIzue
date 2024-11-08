@@ -53,38 +53,32 @@ def color_fail_red(row):
     return color
 
 
-def get_proxies():
-    """Fetching proxy
+def get_proxies():  
+    """Fetching proxy  
+       
+        Fetching proxy from ProxyScrape API and testing reliability for each IP  
+        by sending a request to httpbin.org. If the website returns the sent IP,   
+        we add it to the proxies list until it reaches a length of 10.  
 
-        Fetching proxy from "http://proxylist.fatezero.org/proxy.list" 
-        then test realiability for each ip buy sending to httpbin.org
-        if the website return the sent ip then we add it in proxies list
-        The proxies list is resturn when it reach the length of 15
-
-    Arg:
-        none
-
-    Returns:
-        proxies (list): list of proxy ip adresses x.x.x.x:xxxx
-    """
-    proxies = []
-    r = requests.get("http://proxylist.fatezero.org/proxy.list")
-    print("[+] Getting proxie list, this will take a fews sec")
-    for line in r.iter_lines():
-        if len(proxies) == 10:
-            break
-        line = json.loads(line.decode("utf-8"))
-        if line["type"] == "https":
-            ip = line["host"] +":"+ str(line["port"])
-            try:
-                response = requests.get('https://httpbin.org/ip',proxies={"http": ip, "https": ip})
-                proxies.append(ip)
-                print("[+] Got %s proxies" %len(proxies))
-            except:
-                print("[!] BAD proxy. skip to next one")  
-                #Most free proxies will often get connection errors. You will have retry the entire request using another proxy to work. 
-                #We will just skip retries as its beyond the scope of this tutorial and we are only downloading a single url
-    print('[+] Got ALL 10 proxies')
+    Returns:  
+        proxies (list): list of proxy IP addresses x.x.x.x:xxxx  
+    """  
+    proxies = []  
+    r = requests.get("https://api.proxyscrape.com/?request=displayproxies&proxytype=https")  
+    print("[+] Getting proxy list, this will take a few seconds")  
+    
+    for line in r.text.splitlines():  
+        if len(proxies) == 10:  
+            break  
+        ip = line.strip()  
+        try:  
+            response = requests.get('https://httpbin.org/ip', proxies={"http": ip, "https": ip})  
+            proxies.append(ip)  
+            print("[+] Got %s proxies" % len(proxies))  
+        except:  
+            print("[!] BAD proxy. Skipping to next one")  
+    
+    print('[+] Got ALL 10 proxies')  
     return proxies
 
 def fire(mode, target, payload, header, count, proxy):
