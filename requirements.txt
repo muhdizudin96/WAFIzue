@@ -1,0 +1,8 @@
+pandas
+argparse
+pathlib
+requests
+progress
+matplotlib  
+colorama  
+pyfiglet
